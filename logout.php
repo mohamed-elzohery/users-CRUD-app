@@ -1,0 +1,10 @@
+<?php 
+    session_start();
+if(!isset($_SESSION["email"])){
+    header("Location:login.php");
+  }
+    unset($_SESSION["email"]);
+    unset($_SESSION["id"]);
+    session_destroy();
+    header("Location:login.php");
+?>
